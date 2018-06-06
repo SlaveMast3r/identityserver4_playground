@@ -19,10 +19,7 @@ namespace Client
                 return;
             }
 
-            // request the token from the Auth server
-            var tokenClient = new TokenClient(discoveryClient.TokenEndpoint, "ro.client", "secret");
-            //var response = await tokenClient.RequestClientCredentialsAsync("api1");
-            var response = await tokenClient.RequestResourceOwnerPasswordAsync("alice", "password", "api1");
+            var response = await PasswordProtected(discoveryClient);
 
             if (response.IsError)
             {
@@ -35,5 +32,19 @@ namespace Client
             Console.ReadKey();
         }
 
+        private static Task<TokenResponse> TwoLegged(DiscoveryResponse discoveryClient)
+        {
+            // request the token from the Auth server
+            var tokenClient = new TokenClient(discoveryClient.TokenEndpoint, "client", "secret");
+
+            return tokenClient.RequestClientCredentialsAsync("api1");
+        }
+
+        private static Task<TokenResponse> PasswordProtected(DiscoveryResponse discoveryClient)
+        {
+            var tokenClient = new TokenClient(discoveryClient.TokenEndpoint, "ro.client", "secret");
+
+            return tokenClient.RequestResourceOwnerPasswordAsync("alice", "password", "api1");
+        }
     }
 }
