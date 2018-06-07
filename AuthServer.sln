@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer", "AuthServer\AuthServer.csproj", "{1F129CA0-D7BA-4D4C-9338-BAB0F199C362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{1EDA877B-B6A8-4EF5-BD50-9179F1699087}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{1EDA877B-B6A8-4EF5-BD50-9179F1699087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthClient", "AuthClient\AuthClient.csproj", "{95075125-CD83-4118-8AFE-5EDDDB96CB92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1EDA877B-B6A8-4EF5-BD50-9179F1699087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EDA877B-B6A8-4EF5-BD50-9179F1699087}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EDA877B-B6A8-4EF5-BD50-9179F1699087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95075125-CD83-4118-8AFE-5EDDDB96CB92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95075125-CD83-4118-8AFE-5EDDDB96CB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95075125-CD83-4118-8AFE-5EDDDB96CB92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95075125-CD83-4118-8AFE-5EDDDB96CB92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
