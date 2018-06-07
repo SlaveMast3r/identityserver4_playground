@@ -44,7 +44,7 @@ namespace Client
         {
             var tokenClient = new TokenClient(discoveryClient.TokenEndpoint, "ro.client", "secret");
 
-            return tokenClient.RequestResourceOwnerPasswordAsync("alice", "password", "api1");
+            return tokenClient.RequestResourceOwnerPasswordAsync("alice", "alice", "api1");
         }
     }
 }

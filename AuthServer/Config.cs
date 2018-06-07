@@ -1,4 +1,5 @@
 ﻿using IdentityServer4.Models;
+using IdentityServer4.Quickstart.UI;
 using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
@@ -54,21 +55,23 @@ namespace AuthServer
 
         public static List<TestUser> GetUsers()
         {
-            return new List<TestUser>
-            {
-                new TestUser
-                {
-                    SubjectId = "1",
-                    Username = "alice",
-                    Password = "password"
-                },
-                new TestUser
-                {
-                    SubjectId = "2",
-                    Username = "bob",
-                    Password = "password"
-                }
-            };
+            return TestUsers.Users;
+
+            //return new List<TestUser>
+            //{
+            //    new TestUser
+            //    {
+            //        SubjectId = "1",
+            //        Username = "alice",
+            //        Password = "password"
+            //    },
+            //    new TestUser
+            //    {
+            //        SubjectId = "2",
+            //        Username = "bob",
+            //        Password = "password"
+            //    }
+            //};
         }
     }
 }
