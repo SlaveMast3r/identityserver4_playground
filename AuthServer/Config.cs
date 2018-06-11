@@ -66,18 +66,23 @@ namespace AuthServer
                 // OpenID Connect authorization code flow client (MVC)
                 new Client
                 {
-                    ClientId = "oidc.auth_code",
-                    ClientName = "OpenID Connect Auth Code Flow",
-                    AllowedGrantTypes = GrantTypes.AuthorizationCode,
+                    ClientId = "oidc.hybrid",
+                    ClientName = "OpenID Connect Hybrid Flow",
+                    AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
 
                     ClientSecrets =  { new Secret("secret".Sha256()) },
+
+                    RedirectUris           = { "http://localhost:5002/signin-oidc" },
+                    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
 
                     AllowedScopes = 
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         "api1"
-                    }
+                    },
+
+                    AllowOfflineAccess = true
                 }
             };
         }
