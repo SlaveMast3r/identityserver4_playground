@@ -39,7 +39,7 @@ namespace AuthClient
                     options.Authority = "http://localhost:5000";
                     options.RequireHttpsMetadata = false;
 
-                    options.ClientId = "mvc";
+                    options.ClientId = "oidc.implicit";
 
                     options.SaveTokens = true;
                 });

@@ -46,8 +46,8 @@ namespace AuthServer
                 // OpenID Connect implicit flow client (MVC)
                 new Client
                 {
-                    ClientId = "mvc",
-                    ClientName = "MVC Client",
+                    ClientId = "oidc.implicit",
+                    ClientName = "OpenID Connect Implicit Flow",
                     AllowedGrantTypes = GrantTypes.Implicit,
 
                     // where to redirect to after login
@@ -60,6 +60,23 @@ namespace AuthServer
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile
+                    }
+                },
+                
+                // OpenID Connect authorization code flow client (MVC)
+                new Client
+                {
+                    ClientId = "oidc.auth_code",
+                    ClientName = "OpenID Connect Auth Code Flow",
+                    AllowedGrantTypes = GrantTypes.AuthorizationCode,
+
+                    ClientSecrets =  { new Secret("secret".Sha256()) },
+
+                    AllowedScopes = 
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "api1"
                     }
                 }
             };
