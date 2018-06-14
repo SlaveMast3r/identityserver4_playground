@@ -12,4 +12,10 @@
         <dt>@claim.Type</dt>
         <dd>@claim.Value</dd>
     }
+
+    <dt>access token</dt>
+    <dd>@await Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions.GetTokenAsync(ViewContext.HttpContext, "access_token")</dd>
+
+    <dt>refresh token</dt>
+    <dd>@await Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions.GetTokenAsync(ViewContext.HttpContext, "refresh_token")</dd>
 </dl>
