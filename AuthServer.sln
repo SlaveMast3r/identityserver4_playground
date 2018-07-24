@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer", "AuthServer\Au
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{1EDA877B-B6A8-4EF5-BD50-9179F1699087}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthClient", "AuthClient\AuthClient.csproj", "{95075125-CD83-4118-8AFE-5EDDDB96CB92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthClient", "AuthClient\AuthClient.csproj", "{95075125-CD83-4118-8AFE-5EDDDB96CB92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
