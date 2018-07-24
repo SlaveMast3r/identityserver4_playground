@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Info";
+}
+
+<div>
+    <h1>@ViewBag.Title</h1>
+    <p class="lead">Údaje o prihlásenom používateľovi</p>
+</div>
+
+<div>
+    <table class="table-bordered">
+        <tr><th>Meno</th><td>@Model.Name</td></tr>
+        <tr><th>Typ prihlasenia</th><td>@Model.AuthenticationType</td></tr>
+        <tr><th>SubjectNameId</th><td>@Model.NameID</td></tr>
+        <tr><th>SessionIndex</th><td>@Model.SessionIndex</td></tr>
+        <tr><th colspan="2">Claims</th></tr>
+        @foreach (var item in Model.Claims)
+        {
+            <tr><th>@item.Item1</th><td>@item.Item2</td></tr>
+        }
+        <tr><th>Principal roles</th><td>@string.Join(",", Model.Roles)</td></tr>
+        <tr><th>Bootstrap token</th><td>@Model.BootstrapToken.ToString()</td></tr>
+    </table>
+
+</div>

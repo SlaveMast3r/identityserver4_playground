@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthClient", "AuthClient\AuthClient.csproj", "{95075125-CD83-4118-8AFE-5EDDDB96CB92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamlClient", "SamlClient\SamlClient.csproj", "{D7A8F3FA-F916-479D-A544-E67FAD695D98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{95075125-CD83-4118-8AFE-5EDDDB96CB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95075125-CD83-4118-8AFE-5EDDDB96CB92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95075125-CD83-4118-8AFE-5EDDDB96CB92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A8F3FA-F916-479D-A544-E67FAD695D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A8F3FA-F916-479D-A544-E67FAD695D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A8F3FA-F916-479D-A544-E67FAD695D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A8F3FA-F916-479D-A544-E67FAD695D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

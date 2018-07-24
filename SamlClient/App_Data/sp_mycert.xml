@@ -1,0 +1,63 @@
+﻿<EntityDescriptor ID="_ad1b0fbf-cad4-4fe5-ac59-ee2138a69ad5" entityID="http://localhost.brainit.concepts" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+  <SPSSODescriptor WantAssertionsSigned="true" AuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <KeyDescriptor use="signing">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>
+            MIIDgzCCAmqgAwIBAgIBADANBgkqhkiG9w0BAQ0FADBbMQswCQYDVQQGEwJzazER
+            MA8GA1UECAwIU2xvdmFraWExEDAOBgNVBAoMB0JyYWluSVQxJzAlBgNVBAMMHnNw
+            Lm9hdXRocHJveHkuZGV2LmV4dC5icmFpbi5pdDAeFw0xODA2MTIxMTM2MjRaFw0y
+            MDA2MTExMTM2MjRaMFsxCzAJBgNVBAYTAnNrMREwDwYDVQQIDAhTbG92YWtpYTEQ
+            MA4GA1UECgwHQnJhaW5JVDEnMCUGA1UEAwwec3Aub2F1dGhwcm94eS5kZXYuZXh0
+            LmJyYWluLml0MIIBIzANBgkqhkiG9w0BAQEFAAOCARAAMIIBCwKCAQIAsCaawPvS
+            qphFS667GHblFjeyvCa8aBr09Dhmq4Fc7y41J2oJG2Zpc3tIe/Elx3dymmBt8EKY
+            N557LQo7fg6+98bosZxR78yLee0RCLcZCxzRv2WKD526sXY9gG237ha82mlcace+
+            NFQx0gwuFD3VTFg9HZ/rtB3OVWZSnEgGYHWXcdPNohzQUX7Xa60r/Ixu5JveNWAW
+            s23U0x4TuFG1hmcqJD1//hpbN7+DT3Dbng72u2ep281zYb2xu8aYloiLGuu1aYR/
+            /uM2xJm0LFNhhV+hxEUKGCrzP6S5M+E23KGyZiJXcH90ipCUXllXxLxaVZie7Oo7
+            Hs4KAtzbFkMC2ZMCAwEAAaNQME4wHQYDVR0OBBYEFJBZoLmkmDfwTPhc2I0ldGQr
+            ooamMB8GA1UdIwQYMBaAFJBZoLmkmDfwTPhc2I0ldGQrooamMAwGA1UdEwQFMAMB
+            Af8wDQYJKoZIhvcNAQENBQADggECAJrKoVsJ3mWxWo46uv5sRgYWKA7UUxLzgQDD
+            Q3DJu/KtWbXPQ+SvBHmjXCbQ631cvnalGVBZtYBlduUq54zTA99A+kGe2YqS3Dxw
+            hIcqMBBoB4LrjHW64qCnhp7Un05xnn2MwRNotLwE8oXe326wHWAO8l2dtYSYHxuf
+            5r7nQPnq5IC72RFEYOmXWBTCnPQ/6B6SQtSggcZNHZPmABiOHbwiDmroZRhFISlR
+            rJhvPozpPFLUtlEoY1y3VFHZhIdvfyQXuYIU+tEFq6Qg3CBaYttDKXvC/k7xSUCa
+            ryxbjk/cJfzzlTz/nCvO6rnYDXN+VVjNugbJ7UiPDNLSvgjzWRt+
+          </X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <KeyDescriptor use="encryption">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>
+            MIIDgzCCAmqgAwIBAgIBADANBgkqhkiG9w0BAQ0FADBbMQswCQYDVQQGEwJzazER
+            MA8GA1UECAwIU2xvdmFraWExEDAOBgNVBAoMB0JyYWluSVQxJzAlBgNVBAMMHnNw
+            Lm9hdXRocHJveHkuZGV2LmV4dC5icmFpbi5pdDAeFw0xODA2MTIxMTM2MjRaFw0y
+            MDA2MTExMTM2MjRaMFsxCzAJBgNVBAYTAnNrMREwDwYDVQQIDAhTbG92YWtpYTEQ
+            MA4GA1UECgwHQnJhaW5JVDEnMCUGA1UEAwwec3Aub2F1dGhwcm94eS5kZXYuZXh0
+            LmJyYWluLml0MIIBIzANBgkqhkiG9w0BAQEFAAOCARAAMIIBCwKCAQIAsCaawPvS
+            qphFS667GHblFjeyvCa8aBr09Dhmq4Fc7y41J2oJG2Zpc3tIe/Elx3dymmBt8EKY
+            N557LQo7fg6+98bosZxR78yLee0RCLcZCxzRv2WKD526sXY9gG237ha82mlcace+
+            NFQx0gwuFD3VTFg9HZ/rtB3OVWZSnEgGYHWXcdPNohzQUX7Xa60r/Ixu5JveNWAW
+            s23U0x4TuFG1hmcqJD1//hpbN7+DT3Dbng72u2ep281zYb2xu8aYloiLGuu1aYR/
+            /uM2xJm0LFNhhV+hxEUKGCrzP6S5M+E23KGyZiJXcH90ipCUXllXxLxaVZie7Oo7
+            Hs4KAtzbFkMC2ZMCAwEAAaNQME4wHQYDVR0OBBYEFJBZoLmkmDfwTPhc2I0ldGQr
+            ooamMB8GA1UdIwQYMBaAFJBZoLmkmDfwTPhc2I0ldGQrooamMAwGA1UdEwQFMAMB
+            Af8wDQYJKoZIhvcNAQENBQADggECAJrKoVsJ3mWxWo46uv5sRgYWKA7UUxLzgQDD
+            Q3DJu/KtWbXPQ+SvBHmjXCbQ631cvnalGVBZtYBlduUq54zTA99A+kGe2YqS3Dxw
+            hIcqMBBoB4LrjHW64qCnhp7Un05xnn2MwRNotLwE8oXe326wHWAO8l2dtYSYHxuf
+            5r7nQPnq5IC72RFEYOmXWBTCnPQ/6B6SQtSggcZNHZPmABiOHbwiDmroZRhFISlR
+            rJhvPozpPFLUtlEoY1y3VFHZhIdvfyQXuYIU+tEFq6Qg3CBaYttDKXvC/k7xSUCa
+            ryxbjk/cJfzzlTz/nCvO6rnYDXN+VVjNugbJ7UiPDNLSvgjzWRt+
+          </X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://localhost/brainit/concepts/saml/redirect/slo" ResponseLocation="http://localhost/brainit/concepts/saml/redirect/sloresponse"/>
+    <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost/brainit/concepts/saml/post/slo" ResponseLocation="http://localhost/brainit/concepts/saml/post/sloresponse"/>
+    <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost/brainit/concepts/saml/post/ac" index="0" isDefault="true"/>
+    <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://localhost/brainit/concepts/saml/artifact/ac" index="1"/>
+    <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://localhost/brainit/concepts/saml/redirect/ac" index="2"/>
+  </SPSSODescriptor>
+</EntityDescriptor>

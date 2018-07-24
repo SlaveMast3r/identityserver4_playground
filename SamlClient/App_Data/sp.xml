@@ -1,0 +1,61 @@
+<EntityDescriptor ID="_ad1b0fbf-cad4-4fe5-ac59-ee2138a69ad5" entityID="http://localhost.rbconcepts" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+  <SPSSODescriptor WantAssertionsSigned="true" AuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <KeyDescriptor use="signing">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>
+            MIIDOjCCAuigAwIBAgIQOCBBA2027ZBD4GjmIXwqnjAJBgUrDgMCHQUAMBYxFDAS
+            BgNVBAMTC1Jvb3QgQWdlbmN5MB4XDTE2MTIzMTIyMDAwMFoXDTE4MTIzMTIyMDAw
+            MFowGTEXMBUGA1UEAxMOUkJUZWFtLlRlc3QuZXUwggIiMA0GCSqGSIb3DQEBAQUA
+            A4ICDwAwggIKAoICAQDPdq4i/zdTu7kqYExn8UAaQHmLkyIWQ5aWFMY4ci6lwVJ3
+            uyR0R+5O8d6Tax/jTpDFr3c4VyoZNteE4+2o7R3gjm7SsfvlNeWZF6RQ8YB00I3P
+            lG0+WsNZ50t2beL355eI3PXl1l6WsVUEvXse3E7Gqzd5vjlPT/zxhfqHET1yna5d
+            iz12vYnW9sg0e1wUsETSVAau4UjOqZLxkeqDnOAlO4yySYaoE7aPbEdzonqm5W9t
+            p4QdJE28xYcV7XV8BOdD/mfGYYEADfnmzLrpym+su91jx2wIrd6vzbqNv6ClJJg9
+            7kuNqon0Zpbyxn3xDnJYHdPTpx35SVXrTec8oySIgTSjES0rfI2wB7m4ZozatLIU
+            ia9o+2G/6Gk9BlUlJG1L4rtgYfh8dY9X6Y5ODCa76PGJp+2fpeOan16iYC5OXEC6
+            OixYhWOoXm8IYMfO4LTsLwOZzb17DKdHrZQzu2OEnx7Z/Gw9VHZLAdcooXJ2q2tQ
+            Y1GQLHunlk07AgT56mAhVpouFClBrvr4xQNoN1vdm059sozmZ4zDQP3GjPfUdiIR
+            UBb6QHO9WsMVoqjE1fUFd41tOHm4MBnUN9RwaUWhQFtzJjQL7jXq2p1EzJ2+fUOt
+            RVRyZgHnHpro1p6G2fn/DVq4RVVPHqIfslE/pUSG0IMAGEu1ZLnRVcxttMEF0QID
+            AQABo0swSTBHBgNVHQEEQDA+gBAS5AktBh0dTwCNYSHcFmRjoRgwFjEUMBIGA1UE
+            AxMLUm9vdCBBZ2VuY3mCEAY3bACqAGSKEc+41KpcNfQwCQYFKw4DAh0FAANBABJI
+            rw4KxtxmDbdIkKU8CsNa7NQXYHroh9sqtdttRyVsObSSAwmYQB8RYKUREBD3LF9K
+            bxOxehDojv9jBDWAU84=
+          </X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <KeyDescriptor use="encryption">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>
+            MIIDOjCCAuigAwIBAgIQOCBBA2027ZBD4GjmIXwqnjAJBgUrDgMCHQUAMBYxFDAS
+            BgNVBAMTC1Jvb3QgQWdlbmN5MB4XDTE2MTIzMTIyMDAwMFoXDTE4MTIzMTIyMDAw
+            MFowGTEXMBUGA1UEAxMOUkJUZWFtLlRlc3QuZXUwggIiMA0GCSqGSIb3DQEBAQUA
+            A4ICDwAwggIKAoICAQDPdq4i/zdTu7kqYExn8UAaQHmLkyIWQ5aWFMY4ci6lwVJ3
+            uyR0R+5O8d6Tax/jTpDFr3c4VyoZNteE4+2o7R3gjm7SsfvlNeWZF6RQ8YB00I3P
+            lG0+WsNZ50t2beL355eI3PXl1l6WsVUEvXse3E7Gqzd5vjlPT/zxhfqHET1yna5d
+            iz12vYnW9sg0e1wUsETSVAau4UjOqZLxkeqDnOAlO4yySYaoE7aPbEdzonqm5W9t
+            p4QdJE28xYcV7XV8BOdD/mfGYYEADfnmzLrpym+su91jx2wIrd6vzbqNv6ClJJg9
+            7kuNqon0Zpbyxn3xDnJYHdPTpx35SVXrTec8oySIgTSjES0rfI2wB7m4ZozatLIU
+            ia9o+2G/6Gk9BlUlJG1L4rtgYfh8dY9X6Y5ODCa76PGJp+2fpeOan16iYC5OXEC6
+            OixYhWOoXm8IYMfO4LTsLwOZzb17DKdHrZQzu2OEnx7Z/Gw9VHZLAdcooXJ2q2tQ
+            Y1GQLHunlk07AgT56mAhVpouFClBrvr4xQNoN1vdm059sozmZ4zDQP3GjPfUdiIR
+            UBb6QHO9WsMVoqjE1fUFd41tOHm4MBnUN9RwaUWhQFtzJjQL7jXq2p1EzJ2+fUOt
+            RVRyZgHnHpro1p6G2fn/DVq4RVVPHqIfslE/pUSG0IMAGEu1ZLnRVcxttMEF0QID
+            AQABo0swSTBHBgNVHQEEQDA+gBAS5AktBh0dTwCNYSHcFmRjoRgwFjEUMBIGA1UE
+            AxMLUm9vdCBBZ2VuY3mCEAY3bACqAGSKEc+41KpcNfQwCQYFKw4DAh0FAANBABJI
+            rw4KxtxmDbdIkKU8CsNa7NQXYHroh9sqtdttRyVsObSSAwmYQB8RYKUREBD3LF9K
+            bxOxehDojv9jBDWAU84=
+          </X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://localhost/concepts/saml/redirect/slo" ResponseLocation="http://localhost/concepts/saml/redirect/sloresponse"/>
+    <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost/concepts/saml/post/slo" ResponseLocation="http://localhost/concepts/saml/post/sloresponse"/>
+    <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost/concepts/saml/post/ac" index="0" isDefault="true"/>
+    <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://localhost/concepts/saml/artifact/ac" index="1"/>
+    <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://localhost/concepts/saml/redirect/ac" index="2"/>
+  </SPSSODescriptor>
+</EntityDescriptor>
