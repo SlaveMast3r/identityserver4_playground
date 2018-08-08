@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using IdentityServer4.Models;
-using IdentityServer4.Test;
-using Kentor.AuthServices.Configuration;
 using Microsoft.IdentityModel.Tokens.Saml2;
 using Kentor.AuthServices;
 using Kentor.AuthServices.Metadata;
@@ -16,6 +9,7 @@ using Kentor.AuthServices.WebSso;
 using System.Security.Cryptography.X509Certificates;
 using IdentityServer4;
 using Microsoft.Extensions.Configuration;
+using Kentor.AuthServices.Saml2P;
 
 namespace AuthServer
 {
@@ -40,20 +34,35 @@ namespace AuthServer
                 .AddInMemoryClients(Config.GetClients())
                 .AddTestUsers(Config.GetUsers());
 
-            var samlIdentityUrl = "https://localhost:5000";
-            var samlMetadataUrl = "https://stubidp.sustainsys.com/Metadata";
-            var samlSignOnUrl = "https://stubidp.sustainsys.com/";
-            var certificate = "stubidp.sustainsys.com.cer";
+            //IDP: https://stubidp.sustainsys.com/
+            //var samlIdentityUrl = "https://localhost:5000";
+            //var samlMetadataUrl = "https://stubidp.sustainsys.com/Metadata";
+            //var samlSignOnUrl = "https://stubidp.sustainsys.com/";
+            //var certificate = "stubidp.sustainsys.com.cer";
 
+            //IDP: https://auth.vyvoj.upvs.globaltel.sk/oamfed/idp/samlv20 // https://portal.vyvoj.upvs.globaltel.sk/sk/obcan
+            //note: new line of code options.SPOptions.RequestedAuthnContext
+            var samlIdentityUrl = "http://localhost.rbconcepts";
+            var samlMetadataUrl = "https://auth.vyvoj.upvs.globaltel.sk/oamfed/idp/metadata";
+            var samlSignOnUrl = "https://auth.vyvoj.upvs.globaltel.sk/oamfed/idp/samlv20";
+            var certificate = "rbteam.test.cer";
+            
             services.AddAuthentication()
                 .AddSaml2(options =>
                 {
                     options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
                     options.SPOptions.EntityId = new Saml2NameIdentifier(samlIdentityUrl);
+                    options.SPOptions.RequestedAuthnContext = new Saml2RequestedAuthnContext(new Uri("urn:upvs:qaalevel:1"), AuthnContextComparisonType.Minimum);
+                    //options.SPOptions.ServiceCertificates.Add(new ServiceCertificate()
+                    //{
+                    //    Certificate = new X509Certificate2("rbteam.test.pfx"),
+                    //    Use = CertificateUse.Both
+                    //});
 
                     var idp = new IdentityProvider(new EntityId(samlMetadataUrl), options.SPOptions)
                     {
                         SingleSignOnServiceUrl = new Uri(samlSignOnUrl),
+                        //WantAuthnRequestsSigned = true,
                         Binding = Saml2BindingType.HttpRedirect
                     };
 
