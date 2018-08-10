@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0253405F-B313-4A25-A9A9-D709E2863C6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RBTeam.Saml2Lib</RootNamespace>
+    <AssemblyName>RBTeam.Saml2Lib</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AssertionAttributesConfig.cs" />
+    <Compile Include="Configuration\CertificateStoreConfig.cs" />
+    <Compile Include="Configuration\DataCacheConfig.cs" />
+    <Compile Include="Configuration\RoleMappingRecord.cs" />
+    <Compile Include="Configuration\Saml2Config.cs" />
+    <Compile Include="Configuration\Saml2IncomingMessagesConfig.cs" />
+    <Compile Include="Configuration\Saml2OutgoingMessagesConfig.cs" />
+    <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\Saml2ServiceProviderController.cs" />
+    <Compile Include="Data\Infra\IGlobalContext.cs" />
+    <Compile Include="Data\Infra\IHttpContext.cs" />
+    <Compile Include="Data\Infra\ISaml2Identity.cs" />
+    <Compile Include="Data\Infra\ISaml2Message.cs" />
+    <Compile Include="Data\Infra\ISaml2Principal.cs" />
+    <Compile Include="Data\Infra\ISaml2Receiver.cs" />
+    <Compile Include="Data\Infra\ISaml2ResponseMessage.cs" />
+    <Compile Include="Data\Infra\ISaml2Sender.cs" />
+    <Compile Include="Data\Infra\ISerializer.cs" />
+    <Compile Include="Data\Infra\Saml2Binding.cs" />
+    <Compile Include="Data\Infra\Saml2MessageTypeEnum.cs" />
+    <Compile Include="Data\Infra\Saml2ResponseStatus.cs" />
+    <Compile Include="Data\Infra\Saml2ServiceTypeEnum.cs" />
+    <Compile Include="Data\Messages\ActionType.cs" />
+    <Compile Include="Data\Messages\AdditionalMetadataLocationType.cs" />
+    <Compile Include="Data\Messages\AdviceType.cs" />
+    <Compile Include="Data\Messages\AffiliationDescriptorType.cs" />
+    <Compile Include="Data\Messages\AgreementMethodType.cs" />
+    <Compile Include="Data\Messages\ArtifactResolveType.cs" />
+    <Compile Include="Data\Messages\ArtifactResponseType.cs" />
+    <Compile Include="Data\Messages\AssertionIDRequestType.cs" />
+    <Compile Include="Data\Messages\AssertionType.cs" />
+    <Compile Include="Data\Messages\AttributeAuthorityDescriptorType.cs" />
+    <Compile Include="Data\Messages\AttributeConsumingServiceType.cs" />
+    <Compile Include="Data\Messages\AttributeQueryType.cs" />
+    <Compile Include="Data\Messages\AttributeStatementType.cs" />
+    <Compile Include="Data\Messages\AttributeType.cs" />
+    <Compile Include="Data\Messages\AudienceRestrictionType.cs" />
+    <Compile Include="Data\Messages\AuthnAuthorityDescriptorType.cs" />
+    <Compile Include="Data\Messages\AuthnContextComparisonType.cs" />
+    <Compile Include="Data\Messages\AuthnContextRefType.cs" />
+    <Compile Include="Data\Messages\AuthnContextType.cs" />
+    <Compile Include="Data\Messages\AuthnQueryType.cs" />
+    <Compile Include="Data\Messages\AuthnRequestType.cs" />
+    <Compile Include="Data\Messages\AuthnStatementType.cs" />
+    <Compile Include="Data\Messages\AuthzDecisionQueryType.cs" />
+    <Compile Include="Data\Messages\AuthzDecisionStatementType.cs" />
+    <Compile Include="Data\Messages\BaseIDAbstractType.cs" />
+    <Compile Include="Data\Messages\CanonicalizationMethodType.cs" />
+    <Compile Include="Data\Messages\CipherDataType.cs" />
+    <Compile Include="Data\Messages\CipherReferenceType.cs" />
+    <Compile Include="Data\Messages\ConditionAbstractType.cs" />
+    <Compile Include="Data\Messages\ConditionsType.cs" />
+    <Compile Include="Data\Messages\ContactType.cs" />
+    <Compile Include="Data\Messages\ContactTypeType.cs" />
+    <Compile Include="Data\Messages\DecisionType.cs" />
+    <Compile Include="Data\Messages\DigestMethodType.cs" />
+    <Compile Include="Data\Messages\DSAKeyValueType.cs" />
+    <Compile Include="Data\Messages\EncryptedDataType.cs" />
+    <Compile Include="Data\Messages\EncryptedElementType.cs" />
+    <Compile Include="Data\Messages\EncryptedKeyType.cs" />
+    <Compile Include="Data\Messages\EncryptedType.cs" />
+    <Compile Include="Data\Messages\EncryptionMethodType.cs" />
+    <Compile Include="Data\Messages\EncryptionPropertiesType.cs" />
+    <Compile Include="Data\Messages\EncryptionPropertyType.cs" />
+    <Compile Include="Data\Messages\EndpointType.cs" />
+    <Compile Include="Data\Messages\EntitiesDescriptorType.cs" />
+    <Compile Include="Data\Messages\EntityDescriptorType.cs" />
+    <Compile Include="Data\Messages\EvidenceType.cs" />
+    <Compile Include="Data\Messages\ExtensionsType.cs" />
+    <Compile Include="Data\Messages\ExtensionsType1.cs" />
+    <Compile Include="Data\Messages\IDPEntryType.cs" />
+    <Compile Include="Data\Messages\IDPListType.cs" />
+    <Compile Include="Data\Messages\IDPSSODescriptorType.cs" />
+    <Compile Include="Data\Messages\IndexedEndpointType.cs" />
+    <Compile Include="Data\Messages\ItemsChoiceType.cs" />
+    <Compile Include="Data\Messages\ItemsChoiceType1.cs" />
+    <Compile Include="Data\Messages\ItemsChoiceType2.cs" />
+    <Compile Include="Data\Messages\ItemsChoiceType3.cs" />
+    <Compile Include="Data\Messages\ItemsChoiceType4.cs" />
+    <Compile Include="Data\Messages\ItemsChoiceType5.cs" />
+    <Compile Include="Data\Messages\ItemsChoiceType6.cs" />
+    <Compile Include="Data\Messages\KeyDescriptorType.cs" />
+    <Compile Include="Data\Messages\KeyInfoConfirmationDataType.cs" />
+    <Compile Include="Data\Messages\KeyInfoType.cs" />
+    <Compile Include="Data\Messages\KeyTypes.cs" />
+    <Compile Include="Data\Messages\KeyValueType.cs" />
+    <Compile Include="Data\Messages\localizedNameType.cs" />
+    <Compile Include="Data\Messages\localizedURIType.cs" />
+    <Compile Include="Data\Messages\LogoutRequestType.cs" />
+    <Compile Include="Data\Messages\LogoutResponseType.cs" />
+    <Compile Include="Data\Messages\ManageNameIDRequestType.cs" />
+    <Compile Include="Data\Messages\ManifestType.cs" />
+    <Compile Include="Data\Messages\NameIDMappingRequestType.cs" />
+    <Compile Include="Data\Messages\NameIDMappingResponseType.cs" />
+    <Compile Include="Data\Messages\NameIDPolicyType.cs" />
+    <Compile Include="Data\Messages\NameIDType.cs" />
+    <Compile Include="Data\Messages\ObjectType.cs" />
+    <Compile Include="Data\Messages\OneTimeUseType.cs" />
+    <Compile Include="Data\Messages\OrganizationType.cs" />
+    <Compile Include="Data\Messages\PDPDescriptorType.cs" />
+    <Compile Include="Data\Messages\PGPDataType.cs" />
+    <Compile Include="Data\Messages\ProxyRestrictionType.cs" />
+    <Compile Include="Data\Messages\ReferenceList.cs" />
+    <Compile Include="Data\Messages\ReferenceType.cs" />
+    <Compile Include="Data\Messages\ReferenceType1.cs" />
+    <Compile Include="Data\Messages\RequestAbstractType.cs" />
+    <Compile Include="Data\Messages\RequestedAttributeType.cs" />
+    <Compile Include="Data\Messages\RequestedAuthnContextType.cs" />
+    <Compile Include="Data\Messages\ResponseType.cs" />
+    <Compile Include="Data\Messages\RetrievalMethodType.cs" />
+    <Compile Include="Data\Messages\RoleDescriptorType.cs" />
+    <Compile Include="Data\Messages\RSAKeyValueType.cs" />
+    <Compile Include="Data\Messages\ScopingType.cs" />
+    <Compile Include="Data\Messages\SignatureMethodType.cs" />
+    <Compile Include="Data\Messages\SignaturePropertiesType.cs" />
+    <Compile Include="Data\Messages\SignaturePropertyType.cs" />
+    <Compile Include="Data\Messages\SignatureType.cs" />
+    <Compile Include="Data\Messages\SignatureValueType.cs" />
+    <Compile Include="Data\Messages\SignedInfoType.cs" />
+    <Compile Include="Data\Messages\SPKIDataType.cs" />
+    <Compile Include="Data\Messages\SPSSODescriptorType.cs" />
+    <Compile Include="Data\Messages\SSODescriptorType.cs" />
+    <Compile Include="Data\Messages\StatementAbstractType.cs" />
+    <Compile Include="Data\Messages\StatusCodeType.cs" />
+    <Compile Include="Data\Messages\StatusDetailType.cs" />
+    <Compile Include="Data\Messages\StatusResponseType.cs" />
+    <Compile Include="Data\Messages\StatusType.cs" />
+    <Compile Include="Data\Messages\SubjectConfirmationDataType.cs" />
+    <Compile Include="Data\Messages\SubjectConfirmationType.cs" />
+    <Compile Include="Data\Messages\SubjectLocalityType.cs" />
+    <Compile Include="Data\Messages\SubjectQueryAbstractType.cs" />
+    <Compile Include="Data\Messages\SubjectType.cs" />
+    <Compile Include="Data\Messages\TerminateType.cs" />
+    <Compile Include="Data\Messages\TransformsType.cs" />
+    <Compile Include="Data\Messages\TransformsType1.cs" />
+    <Compile Include="Data\Messages\TransformType.cs" />
+    <Compile Include="Data\Messages\X509DataType.cs" />
+    <Compile Include="Data\Messages\X509IssuerSerialType.cs" />
+    <Compile Include="Data\Model\AssertionAttributes.cs" />
+    <Compile Include="Data\Model\Principal\PrincipalCookieInfo.cs" />
+    <Compile Include="Data\Model\Principal\PrincipalSessionInfo.cs" />
+    <Compile Include="Data\Model\Principal\PrincipalTicketInfo.cs" />
+    <Compile Include="Data\Model\Principal\Saml2Identity.cs" />
+    <Compile Include="Data\Model\Principal\Saml2Principal.cs" />
+    <Compile Include="Data\Model\Saml2MessageInfo.cs" />
+    <Compile Include="Data\Model\Saml2MessageModel.cs" />
+    <Compile Include="Data\Model\UserData.cs" />
+    <Compile Include="Events\Saml2ErrorEventArgs.cs" />
+    <Compile Include="Events\Saml2ErrorEventHandler.cs" />
+    <Compile Include="Events\Saml2EventHandler.cs" />
+    <Compile Include="Events\Saml2MessageEventArgs.cs" />
+    <Compile Include="Events\Saml2MessageEventHandler.cs" />
+    <Compile Include="Exceptions\ConfigException.cs" />
+    <Compile Include="Exceptions\MissingModelDataException.cs" />
+    <Compile Include="Exceptions\ResponseNotSuccessException.cs" />
+    <Compile Include="Exceptions\Saml2ModuleException.cs" />
+    <Compile Include="Exceptions\Saml2ModuleUnhandledException.cs" />
+    <Compile Include="Exceptions\SignOutException.cs" />
+    <Compile Include="Logger\ILog.cs" />
+    <Compile Include="Logger\Log.cs" />
+    <Compile Include="MessageProcessing\Pipeline.cs" />
+    <Compile Include="MessageProcessing\ReceivePipeline.cs" />
+    <Compile Include="MessageProcessing\SendPipeline.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Saml2Handler.cs" />
+    <Compile Include="Saml2Module.cs" />
+    <Compile Include="Services\MessageProcessingService.cs" />
+    <Compile Include="Services\PrincipalService.cs" />
+    <Compile Include="Services\ReceiveDeserializer.cs" />
+    <Compile Include="Services\ReceiveReader.cs" />
+    <Compile Include="Services\ReceiveSignature.cs" />
+    <Compile Include="Services\ReceiveValidator.cs" />
+    <Compile Include="Services\SendMessageCreator.cs" />
+    <Compile Include="Services\SendSerializer.cs" />
+    <Compile Include="Services\SendSignature.cs" />
+    <Compile Include="Services\SendWriter.cs" />
+    <Compile Include="Services\UserDataSessionStore.cs" />
+    <Compile Include="Services\UserDataStoreBase.cs" />
+    <Compile Include="Utils\AuthControllerUtility.cs" />
+    <Compile Include="Utils\BindingUtility.cs" />
+    <Compile Include="Utils\CertificateUtility.cs" />
+    <Compile Include="Utils\ConfigValidator.cs" />
+    <Compile Include="Utils\Const.cs" />
+    <Compile Include="Utils\DeflateUtility.cs" />
+    <Compile Include="Utils\MessageUtility.cs" />
+    <Compile Include="Utils\MetadataUtility.cs" />
+    <Compile Include="Utils\MetadataValidator.cs" />
+    <Compile Include="Utils\Saml2ControllerUtility.cs" />
+    <Compile Include="Utils\SerializationUtility.cs" />
+    <Compile Include="Web\GlobalContext.cs" />
+    <Compile Include="Web\GlobalHttpContext.cs" />
+    <Compile Include="Web\Serializer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
